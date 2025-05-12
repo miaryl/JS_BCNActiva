@@ -22,11 +22,11 @@ message = "a kong string with a silly typo"
    # message[2] = "l" it not work
 new_message = message[0:2] + "l" + message[3:]
 
-print(new_message)
+print(new_message) # print : a long string with a silly typo
 
  # method
 pets = "cats & Dogs"
-print(pets.index("&"))
+print(pets.index("&")) # print: 5
 
 
 def replace_domain(email, old_domain, new_domain):
