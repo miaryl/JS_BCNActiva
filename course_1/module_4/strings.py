@@ -99,7 +99,7 @@ def mirrored_string(my_string):
         if character.isalpha():
             forwards += character
             backwards = character + backwards
-
+            print(backwards) #prints backwards because i don't understand well what is it happen "backwards"
     if forwards.lower() == backwards.lower():
         return True
     return False
@@ -107,3 +107,67 @@ def mirrored_string(my_string):
 print(mirrored_string("12 Noon")) # Should be True
 print(mirrored_string("Was it a car or cat I saw")) # Should be False
 print(mirrored_string("'eve, Madam Eve")) # Should be True
+
+print("-----------------------------------------------------------------------")
+
+# This function generates a username using the first 3 letters of a
+# user’s last name plus their birth year. 
+def username(last_name, birth_year):
+    
+    # The .format() method will use the first 3 letters at index 
+    # positions [0,1,2] of the "last_name" variable for the first
+    # {} placeholder. The second {} placeholder concatenates the user’s
+    #  "birth_year" to that string to form a new string username.
+    return("{}{}".format(last_name[0:3],birth_year))
+
+
+print(username("Ivanov", "1985")) 
+# Should display "Iva1985" 
+print(username("Rodríguez", "2000")) 
+# Should display "Rod2000" 
+print(username("Deng", "1991")) 
+# Should display "Den1991"
+
+print("-----------------------------------------------------------------------")
+
+# This function checks a given schedule entry for an old date and, if 
+# found, the function replaces it with a new date. 
+def replace_date(schedule, old_date, new_date):
+
+    # Check if the given "old_date" appears at the end of the given 
+    # string variable "schedule". 
+    if schedule.endswith(old_date):
+
+        # If True, the body of the if-block will run. The variable "n" is
+        # used to hold the slicing index position. The len() function
+        # is used to measure the length of the string "new_date".
+        p = len(old_date)
+
+        # The "new_schedule" string holds the updated string with the 
+        # old date replaced by the new date. The schedule[:-p] part of 
+        # the code trims the "old_date" substring from "schedule" 
+        # starting at the final index position (or right-side) counting
+        # towards the left the same number of index positions as 
+        # calculated from len(old_date). Then, the code schedule[-p:]
+        # starts the indexing position at the slot where the first
+        # character of the "old_date" used to be positioned. The 
+        # .replace(old_date, new_date) code inserts the "new_date" into
+        # the position where the "old_date" used to exist.  
+        new_schedule = schedule[:-p] + schedule[-p:].replace(old_date, new_date)
+
+
+        # Returns the schedule with the new date.
+        return new_schedule
+        
+    # If the schedule does not end with the old date, then return the
+    # original sentence without any modifications.
+    return schedule
+ 
+ 
+print(replace_date("Last year’s annual report will be released in March 2023", "2023", "2024")) 
+# Should display "Last year’s annual report will be released in March 2024"
+print(replace_date("In April, the CEO will hold a conference", "April", "May")) 
+# Should display "In April, the CEO will hold a conference"
+print(replace_date("The convention is scheduled for October", "October", "June")) 
+# Should display "The convention is scheduled for June"
+
