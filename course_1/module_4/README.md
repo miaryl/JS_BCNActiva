@@ -15,6 +15,18 @@
  - practice assignment
 
 # lists
+ - what is a list?
+ - R: lists defined
+ - modifying the contents of a list
+ - R: modifying lists
+ - lists and tuples
+ - R: tuples
+ - iterating over lists and tuples
+ - R: iterating over list and tuples
+ - list compregensions
+ - R: list compregension examples
+ - R: study guide
+ - practice quiz
 
 # dictionaties
 
