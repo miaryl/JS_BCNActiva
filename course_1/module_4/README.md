@@ -29,5 +29,12 @@
  - practice quiz
 
 # dictionaties
+ - what is dictionary?
+ - R: dictionaries defined
+ - iterating over the contents of a dictionary
+ - R: iterating over dictionaries
+ - dictionaries vs. lists
+ - R: study guide
+ -quiz
 
 # module review
