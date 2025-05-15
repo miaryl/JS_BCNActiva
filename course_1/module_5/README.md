@@ -9,7 +9,25 @@
  - practice assignment
 
 # classes and methods
+ - instance methods
+ - R: what is a method?
+ - constructors and other special methods
+ - R: special methods
+ - documenting functions, classes, and methods
+ - R: documenting with docstrings
+ - R: classes and methods cheat sheet
+ - about jupyter notebooks
+ - R: help with jupyter notebooks
+ - Lab: methods and classes
 
 # code reuse
+ - inheritance
+ - R: object inheritance
+ - composition
+ - R: object composition
+ - python methods
+ - R: augumenting python with medules
+ - R: supplemental reading for code reuse
+ - Lab: code reuse
 
 # module review
