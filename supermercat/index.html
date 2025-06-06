@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supppppppeeeeeerrrrr</title>
+    <script src="Tenda.js"></script>
+</head>
+<body>
+    <script>
+        /*
+        comerc1 = new Tenda("Todo a 1 DNG",9,22);
+        comerc2 = new Tenda("Sapa Delivery",12,3);
+        comerc1.setNom("Ciber Shop"); //before setter: comerc1.nom = "Ciber Shop";
+        document.write(comerc1.getNom() + "<br>"); //before getter: document.write(comerc1.nom);
+
+        document.write(comerc1.toString() + "<br>");
+        document.write(comerc2.toString() + "<br>"); */
+
+        var opcio = 0;
+        var resposta = "";
+        var nom = "";
+        var horariApertura = 0;
+        var horariTamcament = 0;
+        var tendes = new Array(); //[];
+
+
+        do{
+            opcio = parseInt(prompt(
+              "1. Crear comerç\n" + 
+              "2. Veure comerç\n" + 
+              "3. Eliminar comerç\n" + 
+              "0. Sortir"
+            ));
+
+            switch(opcio){
+                case 1:
+                    nom = prompt("Digues el nom del começ?");
+                    horariApertura = prompt("Digues la hora d'apertura?");
+                    horariTamcament = prompt("Digues la hora de tanacament?");
+                    resposta = crearComerc(nom, horariApertura,horariTamcament);
+                break;
+
+                case 2:
+                    nom = prompt("Digues el nom del começ?");
+                    resposta = veureComerc(nom);
+
+
+                break;
+
+                case 3:
+                    nom = prompt("Digues el nom del começ?");
+                    eliminarComerc(nom);
+
+                break;
+                case 0:
+                    resposta = "Adeu";
+                break;
+            }
+            alert(resposta);
+
+        }while(opcio != 0);
+
+        function crearComerc(nom, horariApertura,horariTamcament){
+            novaTenda = new Tenda(nom, horariApertura, horariTamcament);
+            tendes.push(novaTenda);
+            return `La tenda ${nom} s'ha creat correctament`;
+        }
+
+        function veureComerc(nom){
+            let idTrobat = -1;
+            let resposta = "";
+
+            idTrobat = trobarComerc(nom);
+            /*
+            for(let i = 0; i < tendes.length; i++){
+                if(tendes[i].getNom() == nom){
+                    idTrobat = i;
+                }
+
+            } */
+
+            if(idTrobat == -1){
+                resposta = "No s'ha trobat el começ.";
+            } else {
+                resposta = tendes[idTrobat].toString();
+            }
+            return resposta;
+
+        }
+
+        function eliminarComerc(nom){
+            
+
+              }
+
+              if(idTrobat == -1){
+                  resposta = "No s'ha trobat el começ.";
+              } else {
+                  tendes.splice(idTrobat, 1);
+                  resposta = `S'ha eliminat el comerç ${nom}`;
+              }
+              return resposta;
+
+
+        }
+
+        const trobarCoemrc(nom)=> {
+            let idTrobat = -1;
+            let resposta = "";
+            let i =0;
+              //for(let i = 0; i < tendes.length; i++){
+            while(i < tendes.length && idTrobat == -1){
+                  if(tendes[i].getNom() == nom){
+                      idTrobat = i;
+                  }
+                  i++;
+
+            } 
+            return idTrobat;
+        } 
+
+    </script>
+</body>
+</html>

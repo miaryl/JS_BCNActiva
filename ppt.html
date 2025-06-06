@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var option = -1;
+
+        while(option != 0){
+            option = parseInt(prompt("QUé deseas hacer. Jugar 1, Salir 0?"));
+
+            if(option != 0){
+                let textUser = "";
+                let textPc = "";
+
+                let pcOption = parseInt((Math.random() *3)  + 1);
+                let pptOpcion = parseInt(prompt("Escolleix:\n" + 
+                    "1. Pedra\n" +
+                    "2. Paper\n" +
+                    "3. Tissores"
+                ));
+            
+                switch(pcOption){
+                    case 1: 
+                        textPc = "Pedra";
+                        break;
+                    case 2:
+                        textPc = "Paper";
+                        break;
+                    case 3:
+                        textPc = "Tissores";
+                        break;
+                }
+
+                switch(pptOpcion){
+                    case 1:
+                        textUser = "Pedra";
+                        break;
+                    case 2:
+                        textUser = "Paper";
+                        break;
+                    case 3:
+                        textUser = "Tissores";
+                        break;
+                }
+
+                //Casos de guany
+                if((pcOption == 1 && pptOpcion == 3) || (pcOption == 2 && pptOpcion == 1) || (pcOption == 3 && pptOpcion == 2)){
+                    alert("Tu " + textUser + " i jo " + textPc + ". He guanyat!!");
+
+                } else{
+                    alert("Tu " + textUser + " i jo " + textPc + ". Has guanyat!!");
+                }
+            }
+        }
+        while(option != 0);
+        
+        document.write("Adeeeeeeeeu!!");
+    </script>
+    
+</body>
+</html>

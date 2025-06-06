@@ -8,12 +8,28 @@
 <body>
     <script>
         var plat = prompt("que vols?");
-        var diners = prompt("EL/la " + plat + " val 2,34 euro. Que em dones?");
-        var retorn =parseInt(diners) - 2.34;
+        var diners = prompt("EL/la " + plat + " val 2.34 euro. Que em dones?");
+        var retorn =parseFloat(diners) - 2.34; // before: parseInt(diners) - 2.34-> won't return 0
+        var complement = "";
+
 
         //Estructura condicional 
+        if(retorn > 0) {
+            // use toFixed(), return only 2 decimals 
+             document.write("Aqui tens el teu menjar i " + retorn.toFixed(2) + "euros.<br>");
 
-        document.write("Aqui tens el teu menjar i " + retorn + "euros.");
+        }else if(retorn == 0) {
+             document.write("No m'has indicat un valor vàlid.<br>");
+
+        }else{
+             document.write("No has entregat suficients diners.<br>");
+        }
+
+
+        complement = (plat == 'patatas') ? "Et donarem sal" : "No fa falta sal.";
+        document.write(complement);
+
+       
     </script>
 </body>
 </html>

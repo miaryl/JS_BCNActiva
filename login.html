@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functions
+        function login(nom,edat){
+            //let nom = "miriam";
+            document.write("estic loguejat " + nom + "<br>");
+        }
+
+        document.write("------------------------<br>");
+
+        let nom = "Pepe";
+        let edat = 23;
+
+        var respuesta = login(nom,9); //estic loguejat Pepe
+
+        document.write("------------------------<br>");
+
+        login(); // estic loguejat miriam -> undefined
+        login(); // estic loguejat miriam -> undefined
+        login(); // estic loguejat miriam -> undefined
+        login(); // estic loguejat miriam -> undefined
+
+        document.write("------------------------<br>");
+
+        document.write("estic fora del login " + nom + "<br>"); // estic fora del login Pepe 
+
+        document.write("------------------------<br>");
+
+
+        login(nom); //estic loguejat Pepe
+        login("Enric"); //estic loguejat Enric
+        login("Laura"); //estic loguejat Laura
+
+        document.write("------------------------<br>");
+        
+        login(nom, 9); //estic loguejat Pepe
+        login("enric", edat); //estic loguejat enric
+        login("Laura" , 28); //estic loguejat Laura
+
+        document.write("estic fora del login " + nom + "<br>"); //estic fora del login Pepe
+        document.write("el pc diu: " + respuesta); // el pc diu: undefined
+
+        
+
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

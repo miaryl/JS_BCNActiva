@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var carro = ["patates", "peres", "pomes", "cireres", "pinya"];
+        var carro1 = new Array();
+        
+        document.write(carro[2] + "<br>");
+
+        carro[2] = "Dragon Fruit";
+        document.write(carro[2] + "<br>");
+
+        document.write(carro + "<br>");
+
+        // push:añadir
+        carro.push("Coco");
+        document.write(carro + "<br>");
+
+        // pop:eliminar último
+        carro.pop();
+        document.write(carro + "<br>");
+
+
+        
+        for(var item in carro){
+            document.write("producte: " + item + "<br>"); // print producte: 0
+        }
+        
+        // now print index and items
+        for(var item in carro){
+            document.write("producte: " + item + " " + carro[item] + "<br>"); 
+        }
+
+        //-> little bit better way ...
+        for(var item in carro){
+            document.write("Posició: " + item + " " + "producte: " + carro[item] + "<br>");
+        }
+
+
+    </script>
+</body>
+</html>
